@@ -9,6 +9,7 @@ procedurally and exported as a GLB, so the whole game is a static site — no
 server, no assets pipeline at runtime.
 
 **Play it:** <https://aminmiami97-source.github.io/low-poly-drive/>
+**Models:** <https://aminmiami97-source.github.io/low-poly-drive/gallery.html>
 
 ## Features
 
@@ -43,6 +44,19 @@ server, no assets pipeline at runtime.
 | `Esc` | Pause |
 
 Touch controls appear automatically on touch devices.
+
+## Deploying
+
+The live site is published from this repository with GitHub Pages.
+
+`.github/workflows/pages.yml` installs dependencies, regenerates the models,
+builds the bundle and publishes `dist/`. Push to `main` and the site updates
+automatically.
+
+> The workflow file is kept here as `ci/pages.yml`. Copy it to
+> `.github/workflows/pages.yml` (it is identical) if you need to re-create the
+> deployment pipeline — `actions/configure-pages` with `enablement: true`
+> creates the Pages site on the first run.
 
 ## Running locally
 
